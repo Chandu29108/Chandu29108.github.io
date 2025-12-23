@@ -1,0 +1,79 @@
+/* Global page styling */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+  color: #222;
+}
+
+/* Center all main sections and limit width */
+.section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Hero / name block */
+.hero {
+  background: linear-gradient(135deg, #022140, #004f8c);
+  color: #ffffff;
+}
+
+.hero h1 {
+  margin: 0 0 10px;
+  font-size: 2.4rem;
+}
+
+.hero h2 {
+  margin: 0;
+  font-weight: normal;
+  font-size: 1.4rem;
+}
+
+/* About / summary block */
+.about {
+  background-color: #ffffff;
+}
+
+.about p {
+  line-height: 1.6;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Projects block */
+.projects {
+  background-color: #e8f5e9;
+}
+
+.projects h2 {
+  margin-top: 0;
+  font-size: 1.6rem;
+}
+
+.projects ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+.projects li {
+  margin: 10px 0;
+  padding: 10px 15px;
+  background-color: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+/* Optional: small footer style if you add one later */
+footer {
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.85rem;
+  color: #666;
+}

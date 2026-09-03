@@ -788,6 +788,29 @@ function bar(name, val, max, best){
 
 const featured = [
   {
+    tag: "Full-Stack SaaS · Production Engineering",
+    title: "Telecom Churn Intelligence Platform",
+    sub: "Independent project · multi-tenant SaaS · live production deploy",
+    num: "65→80",
+    lbl: "AUDIT SCORE",
+    problem: "A personal project (separate from client work) exploring what it actually takes to turn a churn-prediction model into a real, multi-tenant SaaS product — not just a notebook with a good ROC-AUC, but something a real telecom company could sign up for, upload their own data to, and trust with real customer information.",
+    approach: [
+      "Ran a full production-readiness audit against my own codebase, scoring it 65/100 and identifying 8 concrete gaps — from missing CSRF protection to zero CI/CD — rather than assuming \"it runs\" meant \"it's ready\"",
+      "Designed a cross-domain CSRF defense (frontend on Vercel, backend on Render) using a response-body token pattern, since the standard double-submit-cookie approach silently fails once frontend and backend sit on different origins",
+      "Built a GitHub Actions CI pipeline (tests, dependency audit, secret scanning, frontend build) from scratch, and used it to catch a real, newly-disclosed CVE (a Host-header auth-bypass) before it shipped",
+      "Migrated the database to Neon for genuine point-in-time recovery, then proved it worked with a real drill — deleted 300 live rows on purpose and restored them from a timestamped snapshot",
+      "Wired in Cloudflare R2 for model storage, Groq for an LLM-powered analysis copilot, and Sentry for error tracking — then caught and fixed a real bug where my own test suite was silently reporting fake incidents to production error tracking",
+      "Shipped it: multi-tenant auth, background job processing, SHAP-based explainability, and the copilot all live on Render + Vercel, not just running locally"
+    ],
+    bars: [],
+    result: "Took a solo project from a 65/100 production-readiness score to a genuinely deployed, live application — closing real security gaps (including an actively-disclosed CVE), standing up a CI/CD pipeline, and proving disaster recovery with an actual restore drill rather than a diagram.",
+    stack: ["Python","FastAPI","React","PostgreSQL","SQLAlchemy","Alembic","GitHub Actions","Docker","Cloudflare R2","Sentry","Groq API","Render","Vercel"],
+    links: [
+      ["View on GitHub", "https://github.com/Chandu29108/telecom-churn-platform", "ext"],
+      ["Live demo", "https://telecom-churn-platform-kappa.vercel.app", "ext"]
+    ]
+  },
+  {
     tag: "Generative AI · Multi-Agent System",
     title: "NetAgent — AI Network Troubleshooting Agent",
     sub: "4-agent LangGraph pipeline · RAG · real-time streaming",
